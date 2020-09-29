@@ -7,7 +7,7 @@ let config = {
     iv: process.env.IV//8
 };
 
-router.get('/decrypt', (req, res) => {
+router.post('/decrypt', (req, res) => {
     try {
         if (req.body.text === null || typeof req.body.text === 'undefined' || req.body.text === '') {
             return req.body.text;
